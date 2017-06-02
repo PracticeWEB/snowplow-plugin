@@ -20,7 +20,7 @@ function wp_snowplow_add_scripts() {
 		$parameters = array(
 			'collector' => $collector,
 			'application_id' => $application_id,
-			'cookie'
+			'cookie_domain' => COOKIE_DOMAIN,
 		);
 		wp_enqueue_script( 'snowplow_tracker', plugin_dir_url( __FILE__ ) . 'js/snowplowTracker.js' );
 	    wp_localize_script('snowplow_tracker', 'sp_data', $parameters);
